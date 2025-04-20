@@ -41,7 +41,7 @@ export default function Homepage() {
 
                     {/* Projects Section */}
                     <div
-                        className={`h-fit px-2 py-2 relative z-0 ${["XClonePage", "AIChatbot", "NationalId"].includes(pages)
+                        className={`h-fit px-2 py-2 relative z-0 ${["XClonePage", "Chatbot", "NationalId"].includes(pages)
                             ? "border border-red-400"
                             : "border border-gray-200"
                             }`}
@@ -58,7 +58,7 @@ export default function Homepage() {
                         <div className="h-2" />
                         {[
                             { name: "XClonePage", label: "X (Twitter) Clone" },
-                            { name: "AIChatbot", label: "AI Chatbot" },
+                            { name: "Chatbot", label: "Chatbot" },
                             { name: "NationalId", label: "National Id Registration Portal" },
                             {name:"Resume Builder",label:"Resume Builder"},
                             {name:"Portfolio",label:"Portfolio Website"}
@@ -132,7 +132,7 @@ export default function Homepage() {
             <div className="w-[100%] lg:w-[75%]">
                 {pages === "Personal" && <PersonalPage />}
                 {pages === "XClonePage" && <XClonePage />}
-                {pages === "AIChatbot" && <AIChatPage />}
+                {pages === "Chatbot" && <AIChatPage />}
                 {pages === "NationalId" && <NationalIdPage />}
                 {pages === "HTML" && <HTMLpage />}
                 {pages === "Framer Motion" && <FramerPage />}

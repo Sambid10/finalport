@@ -60,7 +60,7 @@ export default function NavigationContent() {
                                 <div className="h-2" />
                                 {[
                                     { name: "XClonePage", label: "X (Twitter) Clone" },
-                                    { name: "AIChatbot", label: "AI Chatbot" },
+                                    { name: "Chatbot", label: "Chatbot" },
                                     { name: "NationalId", label: "National Id Registration Portal" },
                                 ].map((project) => (
                                     <div

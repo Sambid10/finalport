@@ -4,7 +4,7 @@ export type Pages =
     | "Projects"
     | "Skills"
     | "XClonePage"
-    | "AIChatbot"
+    | "Chatbot"
     | "NationalId"
     | "Resume Builder"
     | "HTML"

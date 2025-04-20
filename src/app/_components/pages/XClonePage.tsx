@@ -26,7 +26,7 @@ export default function XClonePage() {
     return (
       
         <CardRapper>
-            <span className='font-bold'> Built it in <span className='text-yellow-600'>@ </span> 2024</span>
+            <span className='font-bold text-lg md:text-xl'> Built it in <span className='text-yellow-600'>@ </span> 2024</span>
             <div className='h-[1vh]' />
             <a
         href="https://x-khaki-pi.vercel.app/"
@@ -34,12 +34,12 @@ export default function XClonePage() {
         rel="noopener noreferrer"
       >
         <button className="hover:bg-gray-900 py-2 px-12 bg-gray-800 border border-stone-600">
-          <h1 className="text-red-200 text-xl">DEMO</h1>
+          <h1 className="text-red-200  text-lg md:text-xl">DEMO</h1>
         </button>
       </a>
             <div className='h-[2vh]' />
 
-            <span>
+            <span className='text-lg md:text-xl'>
                 A X clone using web technologies such as
                 <span className="text-blue-500"> Next.js</span> and
                 <span className="text-red-500"> ReactQuery</span> to create a seamless and dynamic user experience.
@@ -52,7 +52,7 @@ export default function XClonePage() {
                 <ImageCarasoul images={images} />
             </div>
             <div className='h-[2vh]' />
-            <span className='flex'>
+            <span className='flex text-lg md:text-xl'>
                 For customizable UI, integrating component libraries like Shadcn UI, providing a consistent design system and a robust set of reusable components.
             </span>
           

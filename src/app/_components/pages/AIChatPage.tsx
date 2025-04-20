@@ -4,7 +4,13 @@ import { ImagesData } from './XClonePage'
 import CardRapper from '../CardRapper'
 export default function AIChatPage() {
       const images:ImagesData[] = [{
-            src: "/pro.png"
+            src: "/pyt.png"
+        },
+        {
+            src: "/pyt1.png"
+        },
+        {
+            src: "/pyt3.png"
         },
         {
             src:"/pro2.png"
@@ -15,12 +21,18 @@ export default function AIChatPage() {
        <CardRapper>
          <span className='font-bold'> Built it in <span className='text-yellow-600'>@ </span>2024</span>
             <div className='h-[1vh]' />
-            <button className='hover:bg-gray-900 py-2 px-12 bg-gray-800 border border-stone-600'>
-                <h1 className='text-red-200 text-xl'>DEMO</h1>
-            </button>
+            <a
+        href=" https://github.com/Sambid10/python"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <button className="hover:bg-gray-900 py-2 px-12 bg-gray-800 border border-stone-600">
+          <h1 className="text-red-200 text-xl">DEMO</h1>
+        </button>
+      </a>
             <div className='h-[2vh]' />
             <span>
-                An AIChatbot for a final project using machine learning tools in
+                A Chatbot for a final project using machine learning tools in
                 <span className="text-green-500"> Python</span> with a backend built using
                 <span className="text-rose-200"> Flask</span> to power intelligent conversational responses.
                 The project utilizes <span className="text-blue-500">Keras</span>,
