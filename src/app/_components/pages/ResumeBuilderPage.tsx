@@ -34,7 +34,6 @@ export default function ResumeBuilderPage() {
         </button>
       </a>
       <div className="h-[2vh]" />
-      Here's an updated version incorporating Clerk:
       <span>
         A powerful resume builder application using web technologies such as
         <span className="text-blue-500"> Next.js</span>,

@@ -36,8 +36,6 @@ export default function PortfolioPage() {
         </button>
       </a>
       <div className="h-[2vh]" />
-      Here’s a refined version tailored for a portfolio website, removing
-      resume-related content:
       <span>
         A sleek and dynamic portfolio website built using modern web
         technologies such as
