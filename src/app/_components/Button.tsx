@@ -21,7 +21,7 @@ export default function Button({maintitle,subtitle,contactstate,  setContactstat
         </div>
         <div 
          onClick={()=>setContactstate()}
-        className='h-[100%] w-[100%] bg-[#F95738] text-[#ffffff] quick  flex justify-center  items-center cursor-pointer'>
+        className='h-[100%] w-[100%] bg-[#F95738] text-[#ffffff] quick border border-gray-300 flex justify-center  items-center cursor-pointer'>
           {subtitle}
         </div>
       </motion.div>
