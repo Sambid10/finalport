@@ -1,6 +1,5 @@
 "use client"
 import React from 'react'
-import Homepage from './Homepage'
 import { motion } from "framer-motion"
 export const links = [
     {
@@ -80,7 +79,7 @@ export default function NavComponent() {
                 <motion.div className='absolute bottom-4 flex gap-4 flex-wrap px-2'>
                     {
                         footerLinks.map((link, i) => {
-                            const { title, href } = link;
+                            const { title} = link;
                             return (
                                 <motion.a
                                     variants={perspective}
