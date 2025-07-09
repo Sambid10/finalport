@@ -16,12 +16,11 @@ import { Skills } from "@/lib/Skills";
 import HTMLpage from "./pages/HTMLpage";
 import CssPage from "./pages/CssPage";
 import NextPage from "./pages/NextPage";
-import { label } from "framer-motion/client";
 import ResumeBuilderPage from "./pages/ResumeBuilderPage";
 import PortfolioPage from "./pages/Porfolio";
 export default function Homepage() {
     const { pages, setPages } = useStore()
-    const [currentId,setCurrentId]=useState()
+
     return (
         <div className="flex gap-2 py-6">
             <div className="hidden lg:flex lg:w-[25%]">
@@ -41,7 +40,7 @@ export default function Homepage() {
 
                     {/* Projects Section */}
                     <div
-                        className={`h-fit px-2 py-2 relative z-0 ${["XClonePage", "Chatbot", "NationalId"].includes(pages)
+                        className={`h-fit px-2 py-2 relative z-0 ${["XClonePage", "Chatbot", "NationalId","Resume Builder","Portfolio"].includes(pages)
                             ? "border border-red-400"
                             : "border border-gray-200"
                             }`}

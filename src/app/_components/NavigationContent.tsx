@@ -44,7 +44,7 @@ export default function NavigationContent() {
         {/* Projects Section */}
         <div
           className={`h-fit px-2 py-2 relative z-0 ${
-            ["XClonePage", "AIChatbot", "NationalId"].includes(pages)
+            ["XClonePage", "Chatbot", "NationalId","Portfolio","Resume Builder",].includes(pages)
               ? "border border-red-400"
               : "border border-gray-200"
           }`}
