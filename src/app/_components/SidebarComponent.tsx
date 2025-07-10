@@ -29,7 +29,7 @@ export default function SidebarComponent() {
     <div
       ref={ref}
       className='absolute top-2 right-8 bg-black lg:hidden z-40'>
-      <motion.div
+      {/* <motion.div
         variants={animvariants}
         initial="close"
         animate={sidebarOpen ? "open" : "close"}
@@ -37,12 +37,12 @@ export default function SidebarComponent() {
         <AnimatePresence>
           {sidebarOpen && <NavComponent />}
         </AnimatePresence>
-      </motion.div>
+      </motion.div> */}
       <Button
         contactstate={sidebarOpen}
         setContactstate={() => { setsidebarOpen(!sidebarOpen) }}
-        maintitle={'Menu'}
-        subtitle={'Close'}
+        maintitle={'Hello'}
+        subtitle={'Bye'}
       />
     </div>
   )
