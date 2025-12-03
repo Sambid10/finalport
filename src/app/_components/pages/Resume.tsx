@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { pdfjs, Document, Page } from 'react-pdf';
 import CardRapper from '../CardRapper';
 
@@ -10,19 +10,33 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 ).toString();
 
 function ResumePage() {
+  const ref=useRef<HTMLDivElement>(null)
   const [numPages, setNumPages] = useState<number>(0);
   const [pageNumber, setPageNumber] = useState<number>(1);
+    const [containerWidth, setContainerWidth] = useState<number>(0);
   const gotoPrev = () => setPageNumber((prev) => Math.max(prev - 1, 1))
   const gotoNext = () => setPageNumber((prev) => Math.min(prev + 1, numPages))
   function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
     setNumPages(numPages);
   }
-
+  useEffect(()=>{
+    if (!ref.current) return;
+    const observer=new ResizeObserver(()=>{
+      setContainerWidth(ref.current!.offsetWidth)
+    })
+    observer.observe(ref.current)
+    return ()=>observer.disconnect()
+  },[])
   return (
     <CardRapper>
-      <Document file="/resume.pdf" onLoadSuccess={onDocumentLoadSuccess}>
-        <Page pageNumber={pageNumber} renderTextLayer={false} renderAnnotationLayer={false} />
+      <div
+      ref={ref}
+      >
+     <Document file="/resume.pdf" onLoadSuccess={onDocumentLoadSuccess}>
+        <Page width={containerWidth} pageNumber={pageNumber} renderTextLayer={false} renderAnnotationLayer={false} />
       </Document>
+      </div>
+ 
       <div className='mt-4 flex md:flex-row flex-col gap-4 md:gap-0 md:justify-between'>
         <p>
           Page {pageNumber} of {numPages}
