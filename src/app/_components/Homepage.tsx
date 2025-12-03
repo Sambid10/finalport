@@ -1,8 +1,7 @@
-"use client";
+"use client"
 import React, { useState } from "react";
 import { Pages, useStore } from "@/lib/zustand";
-
-
+import dynamic from 'next/dynamic'
 import PersonalPage from "./pages/PersonalPage";
 import ReactPage from "./pages/ReactPage";
 import JavaScript from "./pages/JavaScript";
@@ -18,7 +17,9 @@ import CssPage from "./pages/CssPage";
 import NextPage from "./pages/NextPage";
 import ResumeBuilderPage from "./pages/ResumeBuilderPage";
 import PortfolioPage from "./pages/Porfolio";
-import { ResumePage } from "./pages/Resume";
+const Resume = dynamic(() => import('../_components/pages/Resume'), {
+  ssr: false, // disables server-side rendering
+});
 export default function Homepage() {
     const { pages, setPages } = useStore()
 
@@ -143,7 +144,7 @@ export default function Homepage() {
                 {pages === "Next.Js" && <NextPage />}
                 {pages === "Resume Builder" && <ResumeBuilderPage/>}
                 {pages === "Portfolio" && <PortfolioPage/>}
-                {pages === "Resume" && <ResumePage/>}
+                {pages === "Resume" && <Resume/>}
             </div>
         </div >
     );

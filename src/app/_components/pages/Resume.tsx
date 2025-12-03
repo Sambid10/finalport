@@ -3,14 +3,13 @@
 import { useState } from 'react';
 import { pdfjs, Document, Page } from 'react-pdf';
 import CardRapper from '../CardRapper';
-import Button from '../Button';
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.min.mjs',
   import.meta.url
 ).toString();
 
-export const ResumePage = () => {
+function ResumePage () {
   const [numPages, setNumPages] = useState<number>(0);
   const [pageNumber, setPageNumber] = useState<number>(1);
   const gotoPrev = () => setPageNumber((prev) => Math.max(prev - 1, 1))
@@ -58,3 +57,4 @@ export const ResumePage = () => {
     </CardRapper>
   );
 };
+export default ResumePage
