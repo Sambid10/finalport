@@ -21,7 +21,7 @@ export default function NavigationContent() {
       initial={"initial"}
       exit={"exit"}
       animate={"open"}
-      className="px-2 py-6"
+      className="px-2 py-6 min-h-screen"
     >
       <div className="flex flex-col gap-10">
         {/* Home Section */}
@@ -33,7 +33,7 @@ export default function NavigationContent() {
               : "border border-gray-200"
           }`}
         >
-          <h1 className="absolute -top-3 z-40 bg-slate-800 px-2">Home</h1>
+          <h1 className={`absolute -top-3 z-40 bg-slate-800 px-2 ${pages === "Personal" && "text-red-400"}`}>Home</h1>
 
           <h1 className="pt-2">
             Hello! I'm Sambid Shakya, a passionate frontend developer from Nepal
@@ -49,7 +49,9 @@ export default function NavigationContent() {
               : "border border-gray-200"
           }`}
         >
-          <h1 className="absolute -top-3 z-40 bg-slate-800 px-2">Projects</h1>
+          <h1 className={`absolute -top-3 z-40 bg-slate-800 px-2 ${
+            ["XClonePage", "Chatbot", "NationalId","Portfolio","Resume Builder",].includes(pages) && "text-red-400"
+          }`}>Projects</h1>
           <div className="absolute -top-7 right-0 z-40 pointer-events-none">
             <img src="elcapo.webp" className="h-7 w-7" />
           </div>
@@ -93,7 +95,18 @@ export default function NavigationContent() {
               : "border border-gray-200"
           }`}
         >
-          <h1 className="absolute -top-3 z-40 bg-slate-800 px-2">Skills</h1>
+          <h1 className={`absolute -top-3 z-40 bg-slate-800 px-2 ${[
+              "HTML",
+              "CSS / Tailwind CSS",
+              "JavaScript",
+              "TypeScript",
+              "React",
+              "Next.Js",
+              "Prisma",
+              "Framer Motion",
+            ].includes(pages)
+            && "text-red-400"
+          }`}>Skills</h1>
           <div className="absolute -top-11 right-0 z-40 pointer-events-none">
             <img src="cute.webp" className="h-12 w-24" />
           </div>

@@ -1,6 +1,7 @@
 "use client"
 import React from 'react'
 import { motion } from "framer-motion"
+import { footerLinks } from '@/lib/FooterLinks'
 export const links = [
     {
         title: "Home",
@@ -11,26 +12,6 @@ export const links = [
         href: "/"
     }
 ]
-
-export const footerLinks = [
-    {
-        title: "Facebook",
-        href: "/"
-    },
-    {
-        title: "LinkedIn",
-        href: "/"
-    },
-    {
-        title: "Instagram",
-        href: "/"
-    },
-    {
-        title: "Twitter",
-        href: "/"
-    }
-]
-
 const perspective={
     initial:{
         opacity:0,
@@ -79,9 +60,10 @@ export default function NavComponent() {
                 <motion.div className='absolute bottom-4 flex gap-4 flex-wrap px-2'>
                     {
                         footerLinks.map((link, i) => {
-                            const { title} = link;
+                            const { title,href} = link;
                             return (
                                 <motion.a
+                                    href={href}
                                     variants={perspective}
                                     custom={i}
                                     initial="initial"

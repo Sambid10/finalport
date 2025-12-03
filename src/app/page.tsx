@@ -1,6 +1,8 @@
 import Homepage from "./_components/Homepage";
 import SidebarComponent from "./_components/SidebarComponent";
 import LeftSidebarComponent from "./_components/LeftSidebarComponent";
+import { footerLinks } from "@/lib/FooterLinks";
+import Link from "next/link";
 export default function Home() {
   return (
     <div className="min-h-[100dvh] max-w-[92rem] px-4 xl:px-2 font-mono mx-auto text-[1.2rem]">
@@ -9,10 +11,11 @@ export default function Home() {
       <LeftSidebarComponent />
       <span className="fixed bottom-4 h-fit w-screen -mx-4">
         <div className="flex w-full justify-center items-center gap-8 text-xs md:text-base">
-          <span className="text-[#E4405F]">Instagram</span>
-          <span className="text-green-200">GitHub</span>
-          <span className="text-[#1DA1F2]">Facebook</span>
-          <span className="text-[#0A66C2]">LinkedIn</span>
+          {footerLinks.map((link,i)=>
+            <Link key={i} href={link.href}>
+              <h1 className={link.color}>{link.title}</h1>
+            </Link>
+          )}
         </div>
       </span>
     </div>

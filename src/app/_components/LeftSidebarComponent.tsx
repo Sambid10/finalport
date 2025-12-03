@@ -8,7 +8,7 @@ import NavigationContent from './NavigationContent'
 import { GiHamburgerMenu } from 'react-icons/gi'
 const animvariants = {
     open: {
-        height: "100vh",
+        height: "100dvh",
         width: "60%",
         top: 0,
         left: "0%",
@@ -34,7 +34,7 @@ export default function LeftSidebarComponent() {
                 variants={animvariants}
                 initial="close"
                 animate={sidebarOpen ? "open" : "close"}
-                className='fixed top-0 left-0 z-30 w-[40%]   bg-slate-800 ' >
+                className='fixed top-0 left-0 z-30 w-[40%]   bg-slate-800 '>
                     <AnimatePresence>
                     {sidebarOpen && <NavigationContent/>}
                     </AnimatePresence>
