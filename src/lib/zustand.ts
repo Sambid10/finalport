@@ -15,7 +15,8 @@ export type Pages =
     | "Next.Js"
     | "Prisma"
     | "Portfolio"
-    | "Framer Motion";
+    | "Framer Motion"
+    | "Resume";
 
 
 interface PageStore{

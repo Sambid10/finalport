@@ -27,11 +27,10 @@ export default function NavigationContent() {
         {/* Home Section */}
         <div
           onClick={() => setPages("Personal")}
-          className={`h-fit cursor-pointer px-2 relative z-0 ${
-            pages === "Personal"
+          className={`h-fit cursor-pointer px-2 relative z-0 ${pages === "Personal"
               ? "border border-red-400"
               : "border border-gray-200"
-          }`}
+            }`}
         >
           <h1 className={`absolute -top-3 z-40 bg-slate-800 px-2 ${pages === "Personal" && "text-red-400"}`}>Home</h1>
 
@@ -43,15 +42,13 @@ export default function NavigationContent() {
 
         {/* Projects Section */}
         <div
-          className={`h-fit px-2 py-2 relative z-0 ${
-            ["XClonePage", "Chatbot", "NationalId","Portfolio","Resume Builder",].includes(pages)
+          className={`h-fit px-2 py-2 relative z-0 ${["XClonePage", "Chatbot", "NationalId", "Portfolio", "Resume Builder",].includes(pages)
               ? "border border-red-400"
               : "border border-gray-200"
-          }`}
+            }`}
         >
-          <h1 className={`absolute -top-3 z-40 bg-slate-800 px-2 ${
-            ["XClonePage", "Chatbot", "NationalId","Portfolio","Resume Builder",].includes(pages) && "text-red-400"
-          }`}>Projects</h1>
+          <h1 className={`absolute -top-3 z-40 bg-slate-800 px-2 ${["XClonePage", "Chatbot", "NationalId", "Portfolio", "Resume Builder",].includes(pages) && "text-red-400"
+            }`}>Projects</h1>
           <div className="absolute -top-7 right-0 z-40 pointer-events-none">
             <img src="elcapo.webp" className="h-7 w-7" />
           </div>
@@ -67,9 +64,8 @@ export default function NavigationContent() {
             <div
               key={project.name}
               onClick={() => setPages(project.name as Pages)}
-              className={`w-full hover:bg-[#121212] -pl-2 -pr-2 ${
-                pages === project.name ? "bg-gray-950" : "bg-none"
-              }`}
+              className={`w-full hover:bg-[#121212] -pl-2 -pr-2 ${pages === project.name ? "bg-gray-950" : "bg-none"
+                }`}
             >
               <ul className="px-4">
                 <li className="list-disc">{project.label}</li>
@@ -80,8 +76,7 @@ export default function NavigationContent() {
 
         {/* Skills Section */}
         <div
-          className={`h-fit cursor-pointer px-2 relative z-0 pb-2 ${
-            [
+          className={`h-fit cursor-pointer px-2 relative z-0 pb-2 ${[
               "HTML",
               "CSS / Tailwind CSS",
               "JavaScript",
@@ -93,20 +88,20 @@ export default function NavigationContent() {
             ].includes(pages)
               ? "border border-red-400"
               : "border border-gray-200"
-          }`}
+            }`}
         >
           <h1 className={`absolute -top-3 z-40 bg-slate-800 px-2 ${[
-              "HTML",
-              "CSS / Tailwind CSS",
-              "JavaScript",
-              "TypeScript",
-              "React",
-              "Next.Js",
-              "Prisma",
-              "Framer Motion",
-            ].includes(pages)
+            "HTML",
+            "CSS / Tailwind CSS",
+            "JavaScript",
+            "TypeScript",
+            "React",
+            "Next.Js",
+            "Prisma",
+            "Framer Motion",
+          ].includes(pages)
             && "text-red-400"
-          }`}>Skills</h1>
+            }`}>Skills</h1>
           <div className="absolute -top-11 right-0 z-40 pointer-events-none">
             <img src="cute.webp" className="h-12 w-24" />
           </div>
@@ -116,9 +111,8 @@ export default function NavigationContent() {
             <div
               key={i}
               onClick={() => setPages(skill.name as Pages)}
-              className={`w-full cursor-default hover:bg-[#121212] -pl-2 -pr-2 ${
-                pages === skill.name ? "bg-gray-950" : "bg-none"
-              }`}
+              className={`w-full cursor-default hover:bg-[#121212] -pl-2 -pr-2 ${pages === skill.name ? "bg-gray-950" : "bg-none"
+                }`}
             >
               <ul className="px-4">
                 <li className="list-disc">
@@ -130,6 +124,19 @@ export default function NavigationContent() {
               </ul>
             </div>
           ))}
+        </div>
+        <div
+          onClick={() => setPages("Resume")}
+          className={`h-fit cursor-pointer px-2 relative z-0 ${pages === "Resume"
+              ? "border border-red-400"
+              : "border border-gray-200"
+            }`}
+        >
+          <h1 className={`absolute -top-3 z-40 bg-slate-800 px-2 ${pages === "Resume" && "text-red-400"}`}>My Resume</h1>
+
+          <h1 className="pt-2">
+            Check here!!
+          </h1>
         </div>
       </div>
     </motion.div>

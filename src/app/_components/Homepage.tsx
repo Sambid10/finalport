@@ -18,6 +18,7 @@ import CssPage from "./pages/CssPage";
 import NextPage from "./pages/NextPage";
 import ResumeBuilderPage from "./pages/ResumeBuilderPage";
 import PortfolioPage from "./pages/Porfolio";
+import { ResumePage } from "./pages/Resume";
 export default function Homepage() {
     const { pages, setPages } = useStore()
 
@@ -126,7 +127,6 @@ export default function Homepage() {
 
                 <div className="h-[2vh]" />
             </div>
-
             {/* Content Display Section */}
             <div className="w-[100%] lg:w-[75%]">
                 {pages === "Personal" && <PersonalPage />}
@@ -143,6 +143,7 @@ export default function Homepage() {
                 {pages === "Next.Js" && <NextPage />}
                 {pages === "Resume Builder" && <ResumeBuilderPage/>}
                 {pages === "Portfolio" && <PortfolioPage/>}
+                {pages === "Resume" && <ResumePage/>}
             </div>
         </div >
     );
