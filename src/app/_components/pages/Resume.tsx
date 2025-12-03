@@ -9,7 +9,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   import.meta.url
 ).toString();
 
-function ResumePage () {
+function ResumePage() {
   const [numPages, setNumPages] = useState<number>(0);
   const [pageNumber, setPageNumber] = useState<number>(1);
   const gotoPrev = () => setPageNumber((prev) => Math.max(prev - 1, 1))
@@ -23,7 +23,7 @@ function ResumePage () {
       <Document file="/resume.pdf" onLoadSuccess={onDocumentLoadSuccess}>
         <Page pageNumber={pageNumber} renderTextLayer={false} renderAnnotationLayer={false} />
       </Document>
-      <div className='mt-4 flex justify-between'>
+      <div className='mt-4 flex md:flex-row flex-col gap-4 md:gap-0 md:justify-between'>
         <p>
           Page {pageNumber} of {numPages}
         </p>
