@@ -34,7 +34,7 @@ export default function LeftSidebarComponent() {
                 variants={animvariants}
                 initial="close"
                 animate={sidebarOpen ? "open" : "close"}
-                className='fixed top-0 left-0 z-30 w-[40%] overflow-y-auto   bg-slate-800 '>
+                className='fixed top-0 left-0 z-[100] w-[40%] overflow-y-auto   bg-slate-800 '>
                     <AnimatePresence>
                     {sidebarOpen && <NavigationContent/>}
                     </AnimatePresence>
@@ -42,7 +42,7 @@ export default function LeftSidebarComponent() {
             </motion.div>
             <button 
             onClick={()=>setsidebarOpen(!sidebarOpen)}
-            className='h-[40px] z-20 flex justify-center items-center  w-[120px] absolute top-1 left-1  text-[#fff] bg-gray-800 border border-gray-300 '>
+            className='h-[40px] z-[90] flex justify-center items-center  w-[120px] absolute top-1 left-1  text-[#fff] bg-gray-800 border border-gray-300 '>
                 <GiHamburgerMenu/>
             </button>
         </div>
