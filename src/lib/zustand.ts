@@ -16,7 +16,8 @@ export type Pages =
     | "Prisma"
     | "Portfolio"
     | "Framer Motion"
-    | "Resume";
+    | "Resume"
+    | "YT";
 
 
 interface PageStore{

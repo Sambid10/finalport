@@ -17,6 +17,7 @@ import CssPage from "./pages/CssPage";
 import NextPage from "./pages/NextPage";
 import ResumeBuilderPage from "./pages/ResumeBuilderPage";
 import PortfolioPage from "./pages/Porfolio";
+import YoutubeClone from "./pages/YoutubeClone";
 const Resume = dynamic(() => import('../_components/pages/Resume'), {
     ssr: false, // disables server-side rendering
 });
@@ -25,7 +26,7 @@ export default function Homepage() {
 
     return (
         <div className="flex gap-2 py-6 relative z-40">
-            <div className="hidden lg:flex lg:w-[25%]">
+            <div className="hidden lg:flex lg:w-[25%] lg:min-h-screen">
                 <div className="flex flex-col gap-10 bg">
                     {/* Home Section */}
                     <div
@@ -58,7 +59,7 @@ export default function Homepage() {
                             }`}
                     >
                         <h1 className={`absolute -top-3 z-40 bg-[#0d1117] px-2 ${["XClonePage", "Chatbot", "NationalId", "Portfolio", "Resume Builder",].includes(pages) && "text-red-400"
-            }`}>Projects</h1>
+                            }`}>Projects</h1>
                         <div className="absolute -top-7 right-0 z-40 pointer-events-none">
                             <img
                                 src='elcapo.webp'
@@ -69,6 +70,7 @@ export default function Homepage() {
 
                         <div className="h-2" />
                         {[
+                            { name: "YT", label: "KathmaTube" },
                             { name: "XClonePage", label: "X (Twitter) Clone" },
                             { name: "Chatbot", label: "Chatbot" },
                             { name: "NationalId", label: "National Id Registration Portal" },
@@ -168,6 +170,7 @@ export default function Homepage() {
                 {pages === "Resume Builder" && <ResumeBuilderPage />}
                 {pages === "Portfolio" && <PortfolioPage />}
                 {pages === "Resume" && <Resume />}
+                {pages === "YT" && <YoutubeClone/>}
             </div>
         </div >
     );

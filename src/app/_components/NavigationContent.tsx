@@ -28,8 +28,8 @@ export default function NavigationContent() {
         <div
           onClick={() => setPages("Personal")}
           className={`h-fit cursor-pointer px-2 relative z-0 ${pages === "Personal"
-              ? "border border-red-400"
-              : "border border-gray-200"
+            ? "border border-red-400"
+            : "border border-gray-200"
             }`}
         >
           <h1 className={`absolute -top-3 z-40 bg-slate-800 px-2 ${pages === "Personal" && "text-red-400"}`}>Home</h1>
@@ -43,8 +43,8 @@ export default function NavigationContent() {
         {/* Projects Section */}
         <div
           className={`h-fit px-2 py-2 relative z-0 ${["XClonePage", "Chatbot", "NationalId", "Portfolio", "Resume Builder",].includes(pages)
-              ? "border border-red-400"
-              : "border border-gray-200"
+            ? "border border-red-400"
+            : "border border-gray-200"
             }`}
         >
           <h1 className={`absolute -top-3 z-40 bg-slate-800 px-2 ${["XClonePage", "Chatbot", "NationalId", "Portfolio", "Resume Builder",].includes(pages) && "text-red-400"
@@ -55,6 +55,7 @@ export default function NavigationContent() {
 
           <div className="h-2" />
           {[
+            { name: "YT", label: "KathmaTube" },
             { name: "XClonePage", label: "X (Twitter) Clone" },
             { name: "Chatbot", label: "Chatbot" },
             { name: "NationalId", label: "National Id Registration Portal" },
@@ -77,17 +78,17 @@ export default function NavigationContent() {
         {/* Skills Section */}
         <div
           className={`h-fit cursor-pointer px-2 relative z-0 pb-2 ${[
-              "HTML",
-              "CSS / Tailwind CSS",
-              "JavaScript",
-              "TypeScript",
-              "React",
-              "Next.Js",
-              "Prisma",
-              "Framer Motion",
-            ].includes(pages)
-              ? "border border-red-400"
-              : "border border-gray-200"
+            "HTML",
+            "CSS / Tailwind CSS",
+            "JavaScript",
+            "TypeScript",
+            "React",
+            "Next.Js",
+            "Prisma",
+            "Framer Motion",
+          ].includes(pages)
+            ? "border border-red-400"
+            : "border border-gray-200"
             }`}
         >
           <h1 className={`absolute -top-3 z-40 bg-slate-800 px-2 ${[
@@ -128,8 +129,8 @@ export default function NavigationContent() {
         <div
           onClick={() => setPages("Resume")}
           className={`h-fit cursor-pointer px-2 relative z-0 ${pages === "Resume"
-              ? "border border-red-400"
-              : "border border-gray-200"
+            ? "border border-red-400"
+            : "border border-gray-200"
             }`}
         >
           <h1 className={`absolute -top-3 z-40 bg-slate-800 px-2 ${pages === "Resume" && "text-red-400"}`}>My Resume</h1>
