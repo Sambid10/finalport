@@ -26,15 +26,16 @@ export default function Homepage() {
 
     return (
         <div className="flex gap-2 py-6 relative z-40">
-            <div className="hidden lg:flex lg:w-[25%] lg:min-h-screen">
-                <div className="flex flex-col gap-10 bg">
+            <div className="hidden lg:flex lg:w-[25%]  h-[calc(100dvh-80px)] overflow-y-auto">
+              
+                <div className="flex flex-col gap-10 overflow-y-auto ">
                     {/* Home Section */}
                     <div
                         onClick={() => setPages("Personal")}
-                        className={`h-fit cursor-pointer px-2 relative z-0 ${pages === "Personal" ? "border border-red-400" : "border border-gray-200"
+                        className={`h-fit cursor-pointer px-2 relative z-[100] ${pages === "Personal" ? "border border-red-400" : "border border-gray-200"
                             }`}
                     >
-                        <h1 className={`absolute -top-3 z-40 bg-[#0d1117] px-2 ${pages === "Personal" && "text-red-400"}`}>Home</h1>
+                        <h1 className={`absolute -top-2 z-[100] bg-[#0d1117] px-2 ${pages === "Personal" && "text-red-400"}`}>Home</h1>
 
 
                         <h1 className="pt-4">
@@ -53,12 +54,12 @@ export default function Homepage() {
                     </div>
                     {/* Projects Section */}
                     <div
-                        className={`h-fit px-2 py-2 relative z-0 ${["XClonePage", "Chatbot", "NationalId", "Resume Builder", "Portfolio"].includes(pages)
+                        className={`h-fit px-2 py-2 relative z-0 ${["XClonePage", "Chatbot", "NationalId", "Resume Builder", "Portfolio","YT"].includes(pages)
                             ? "border border-red-400"
                             : "border border-gray-200"
                             }`}
                     >
-                        <h1 className={`absolute -top-3 z-40 bg-[#0d1117] px-2 ${["XClonePage", "Chatbot", "NationalId", "Portfolio", "Resume Builder",].includes(pages) && "text-red-400"
+                        <h1 className={`absolute -top-3 z-40 bg-[#0d1117] px-2 ${["XClonePage", "Chatbot", "NationalId", "Portfolio", "Resume Builder","YT"].includes(pages) && "text-red-400"
                             }`}>Projects</h1>
                         <div className="absolute -top-7 right-0 z-40 pointer-events-none">
                             <img
