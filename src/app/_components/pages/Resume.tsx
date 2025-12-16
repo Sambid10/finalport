@@ -32,7 +32,7 @@ function ResumePage() {
       <div
       ref={ref}
       >
-     <Document file="/resume.pdf" onLoadSuccess={onDocumentLoadSuccess}>
+     <Document file="/Sam.pdf" onLoadSuccess={onDocumentLoadSuccess}>
         <Page width={containerWidth} pageNumber={pageNumber} renderTextLayer={false} renderAnnotationLayer={false} />
       </Document>
       </div>
